@@ -45,11 +45,47 @@ function sayHello() {
 function multiply(value1, value2) {
     return value1 * value2;
 }
-console.log(multiply(2, 'Max')); // returns NaN because it is expecting a number and can't multiply a number times a string
+console.log(multiply(2, 2)); // returns NaN because it is expecting a number and can't multiply a number times a string
 // functions are a type on their own
 // function types
 var myMultiply;
-myMultiply = sayHello;
-myMultiply();
+//myMultiply = sayHello;
+//myMultiply();
 myMultiply = multiply;
 console.log(myMultiply(5, 2));
+//objects
+var userData = {
+    name: "Max",
+    age: 27
+};
+// complex object
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+var complex2 = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+// union types
+var myRealRealAge = 27;
+myRealRealAge = "27";
+// check types
+var finalValue = 30;
+if (typeof finalValue == "number") {
+    console.log("final value is a number");
+}
+// never type - never returns - to make intension clear
+function neverReturns() {
+    throw new Error('An error!');
+}
+// nullable types 
+var canBeNull = 12;
+canBeNull = null;
+var canAlsoBeNull;
+canAlsoBeNull = null;
+var canThisBeAny = null;

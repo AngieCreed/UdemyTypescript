@@ -93,3 +93,24 @@ let complex2: Complex = {
     }
 }
 
+// union types
+let myRealRealAge: number | string = 27;
+myRealRealAge = "27";
+
+// check types
+let finalValue = 30;
+if (typeof finalValue == "number") {
+    console.log("final value is a number")
+}
+
+// never type - never returns - to make intension clear
+function neverReturns():never {
+    throw new Error('An error!');
+}
+
+// nullable types 
+let canBeNull: number | null = 12;
+canBeNull = null;
+let canAlsoBeNull;
+canAlsoBeNull = null;
+let canThisBeAny = null;
