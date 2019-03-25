@@ -89,3 +89,47 @@ canBeNull = null;
 var canAlsoBeNull;
 canAlsoBeNull = null;
 var canThisBeAny = null;
+function controlMe(isTrue, somethingElse) {
+    var result;
+    if (isTrue) {
+        result = 12;
+    }
+    result = 33;
+    return result;
+}
+// let & const
+// let is defined in the block in which it's created
+var variable = "Test";
+console.log(variable);
+variable = "Another Value";
+console.log(variable);
+var maxLevels = 100;
+console.log(maxLevels);
+// maxLevels = 99
+// can't change the value of const variable
+console.log("Arrow Functions");
+var addNumbers = function (number1, number2) {
+    return number1 + number2;
+};
+console.log(addNumbers(10, 3));
+var multiplyNumbers = function (number1, number2) { return number1 * number2; };
+console.log(multiplyNumbers(10, 3));
+var greet = function () {
+    console.log("hello");
+};
+greet();
+// default parameters
+var countdown = function (start) {
+    if (start === void 0) { start = 10; }
+    while (start > 0) {
+        start--;
+    }
+    console.log("done", start);
+};
+countdown();
+////////////////////////////////////////////////
+// Rest & Spread
+console.log("rest and spread");
+var numbers = [1, 10, 99, -5];
+console.log(Math.max(33, 99, 10, -3));
+console.log(Math.max.apply(Math, numbers));

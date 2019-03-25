@@ -114,3 +114,65 @@ canBeNull = null;
 let canAlsoBeNull;
 canAlsoBeNull = null;
 let canThisBeAny = null;
+
+
+function controlMe(isTrue: boolean, somethingElse: boolean) {
+    let result: number;
+    if (isTrue) {
+        result = 12;
+    }
+    result = 33
+    return result;
+}
+
+// let & const
+// let is defined in the block in which it's created
+
+let variable = "Test"
+console.log(variable);
+variable = "Another Value"
+console.log(variable)
+
+const maxLevels = 100;
+console.log(maxLevels)
+// maxLevels = 99
+// can't change the value of const variable
+
+console.log("Arrow Functions")
+
+const addNumbers = function (number1: number, number2: number): number {
+    return number1 + number2
+}
+console.log(addNumbers(10, 3))
+
+const multiplyNumbers = (number1: number, number2: number) => number1 * number2;
+console.log(multiplyNumbers(10, 3))
+
+const greet = () => {
+    console.log("hello")
+}
+greet();
+
+// default parameters
+const countdown = (start: number = 10): void => {
+    while (start > 0) {
+        start--;
+    }
+    console.log("done", start)
+}
+countdown();
+
+////////////////////////////////////////////////
+
+// Rest & Spread
+console.log("rest and spread")
+
+const numbers = [1, 10, 99, -5];
+console.log(Math.max(33, 99, 10, -3))
+console.log(Math.max(...numbers));
+
+
+function makeArray(...args: number) {
+    return args;
+}
+console.log(makeArray(1))
