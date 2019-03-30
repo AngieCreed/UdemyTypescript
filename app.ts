@@ -172,7 +172,7 @@ console.log(Math.max(33, 99, 10, -3))
 console.log(Math.max(...numbers));
 
 
-function makeArray(...args: number) {
+function makeArray(...args: number[]) {
     return args;
 }
-console.log(makeArray(1))
+console.log(makeArray(1, 2, 3))
