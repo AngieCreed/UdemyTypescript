@@ -40,3 +40,5 @@ let myself: {name: string, bankAccount: BankAccount, hobbies: string[]} = {
 
 myself.bankAccount.deposit(3000);
 console.log(myself)
+
+// test
